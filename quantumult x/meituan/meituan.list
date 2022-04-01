@@ -1,0 +1,7 @@
+
+hostname=i.meituan.com
+
+https:\/\/i\.meituan\.com\/awp\/hfe\/block\/7bb53f589b1f/21960/index.html\SresourceV2=107116\S* url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
+
+
+# 1 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js

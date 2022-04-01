@@ -1,0 +1,19 @@
+#!name=Google
+#!desc=Google重写合集
+
+
+[Script]
+
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+
+^https?://(www.)?g.cn https://www.google.com 302
+
+^https?://(www.)?google.cn  https://www.google.com 302
+
+^https?://(www.)?google.cn/search  https://www.google.com/search 302
+
+Google 油猴脚本= type=http-response,pattern=https:\/\/www\.google\..*,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/hello1983/f5e27c01dc954afeaca0e1c166a5d407/raw/Endless_Google.user.js,script-update-interval=0
+
+[mitm]
+
+hostname = %APPEND% www.google.com

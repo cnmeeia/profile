@@ -1,0 +1,49 @@
+
+hostname = www.52pojie.cn, amdc.m.taobao.com, api.interpreter.caiyunai.com,license.pdfexpert.com,*.iqiyi.com,wapside.189.cn:9001, mobwsa.ximalaya.com, *.v2ex.com,me-api.jd.com
+
+
+# 52破解
+
+https:\/\/www\.52pojie\.cn\/home\.php\?mod=space url script-response-body https://raw.githubusercontent.com/leompsy/nzw9314/master/sazs34/cookie/cookie_52pojie.js
+
+# 京东签到获取cookie
+
+^https:\/\/me-api\.jd\.com\/user_new\/info\/GetJDUserInfoUnion url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+# 爱奇艺获取cookie
+
+https?:\/\/.*\.iqiyi\.com\/.*authcookie= url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+
+
+
+# V2ex获取cookie
+
+^https:\/\/www\.v2ex\.com\/mission\/daily url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/quanx/v2ex.cookie.js
+
+
+# 电信营业厅获取cookie 单独版 By chavyleung)
+
+^https:\/\/wapside.189.cn:9001\/api\/home\/sign url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js
+
+# 京东到家
+
+^https:\/\/daojia.jd.com/client(.*?)functionId=signin(.*?)userSigninNew url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.cookie.js
+
+# 中国电信套餐 (By @uchvk & @Macsuny)
+
+^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/telecomInfinity.js
+
+
+# 微信喜马拉雅 (By @makexp)
+
+https://m.ximalaya.com/wechat/ url script-request-header https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/xmly_wc.js
+
+#京东历史比价 (by yichahucha)
+
+^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+
+#淘宝历史比价 (by yichahucha)
+
+^http://.+/amdc/mobileDispatch url script-request-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+
+^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js

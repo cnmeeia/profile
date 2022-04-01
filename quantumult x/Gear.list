@@ -1,0 +1,3 @@
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/hello1983/QX_JS/main/Gear.js
+
+hostname = buy.itunes.apple.com

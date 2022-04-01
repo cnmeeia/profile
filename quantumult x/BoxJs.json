@@ -1,0 +1,10 @@
+{
+    "id": "Mick", 
+    "name": "APP签到", 
+    "author": "@Mick", 
+    "icon": "https://gitee.com/mick202020/Quantumult-x/raw/master/png/Mick.png", 
+    "repo": "https://gitee.com/mick202020/Quantumult-x/tree/master/Box.json", 
+    "task": [
+        "0 0-23/1 * * * https://raw.githubusercontent.com/songyangzz/QuantumultX/master/testflight.js, tag=testflight公测监控, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/testflight.png, enabled=true",
+    ]
+}

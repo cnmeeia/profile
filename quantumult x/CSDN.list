@@ -1,0 +1,5 @@
+
+.*:\/\/.*\.csdn\.net\/.* url script-response-body https://gist.githubusercontent.com/hello1983/f5e27c01dc954afeaca0e1c166a5d407/raw/CSDN.js
+
+
+hostname = *.csdn.net

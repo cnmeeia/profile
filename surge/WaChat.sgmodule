@@ -1,0 +1,11 @@
+#!name=WaChat
+#!desc=微信去广告
+#!system=ios
+
+[Script]
+
+WaChat_ad = type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad script-path= https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+
+[MITM]
+
+hostname = mp.weixin.qq.com

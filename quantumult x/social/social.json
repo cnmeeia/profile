@@ -1,0 +1,40 @@
+{
+  "request_date_ms" : 1641609175169,
+  "request_date" : "2022-01-08T02:32:55Z",
+  "subscriber" : {
+    "non_subscriptions" : {
+
+    },
+    "first_seen" : "2022-01-08T02:29:53Z",
+    "original_application_version" : "38",
+    "other_purchases" : {
+
+    },
+    "management_url" : "itms-apps://apps.apple.com/account/subscriptions",
+    "subscriptions" : {
+      "com.socialstats.pro.monthly" : {
+        "is_sandbox" : false,
+        "ownership_type" : "PURCHASED",
+        "billing_issues_detected_at" : null,
+        "period_type" : "trial",
+        "expires_date" : "2032-01-11T02:32:48Z",
+        "grace_period_expires_date" : null,
+        "unsubscribe_detected_at" : null,
+        "original_purchase_date" : "2022-01-08T02:32:49Z",
+        "purchase_date" : "2022-01-08T02:32:48Z",
+        "store" : "app_store"
+      }
+    },
+    "entitlements" : {
+      "Pro" : {
+        "grace_period_expires_date" : null,
+        "purchase_date" : "2022-01-08T02:32:48Z",
+        "product_identifier" : "com.socialstats.pro.monthly",
+        "expires_date" : "2032-01-11T02:32:48Z"
+      }
+    },
+    "original_purchase_date" : "2022-01-08T02:29:42Z",
+    "original_app_user_id" : "$RCAnonymousID:b842bda953be469cb5b9d274d978cef0",
+    "last_seen" : "2022-01-08T02:29:53Z"
+  }
+}

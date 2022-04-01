@@ -1,0 +1,18 @@
+
+{
+  "tokens" : {
+    "is_new_account" : false,
+    "provider" : "Google",
+    "id" : "f209e515-c21f-486e-96db-31589f38d8d9",
+    "scope" : "https://cloud.feedly.com/subscriptions",
+    "refresh_token" : "A0oQuCChl-tC_OIeuz57RHmEnb4pL9EcNNohM7ORI_CBZVRi88sXCc7N5Sqp7PUKeiZEWxmUAAhrXNTlr799l9as-2bG0NyFOuPLQL4kjqeoh84DdpwYuW_h2QoRx2o4oa-Xf4sL-jYie1VcX-rSPrBBmFcjxxncl0rhvDCDFhKO_QWCkFqtTFr0VJADcGdhU0CbOIhV91TV0ix6:feedly",
+    "token_type" : "bearer",
+    "plan" : "proPlus",
+    "access_token" : "A-VT3v74oTvYaHaJjQp44tpOchL2IM-B6rrZ005LDSLPSMHvKMhb7o7pjOQsV9ILnizVG2Q7lquA0dX9IGcVVch2w7bySO4r0zfn3mCtUe9qmneCRkOHpGleQjFvIi3s1NAeHRxIQlBHsRa8hLGgJ7ucSw-JHJ7TmDS8Z4hPkJgIX3WHI1HAeMiuFABWGLIcA3uvGXrlStXbRZADh9m6dQK2CAGCpECOiiuzb6ydPM8:feedly",
+    "expires_in" : 604800
+  },
+  "product" : "FeedlyProPlusMonthly16",
+  "accessToken" : "A-VT3v74oTvYaHaJjQp44tpOchL2IM-B6rrZ005LDSLPSMHvKMhb7o7pjOQsV9ILnizVG2Q7lquA0dX9IGcVVch2w7bySO4r0zfn3mCtUe9qmneCRkOHpGleQjFvIi3s1NAeHRxIQlBHsRa8hLGgJ7ucSw-JHJ7TmDS8Z4hPkJgIX3WHI1HAeMiuFABWGLIcA3uvGXrlStXbRZADh9m6dQK2CAGCpECOiiuzb6ydPM8:feedly",
+  "expiration" : 11648442319000,
+  "plan" : "proPlus"
+}

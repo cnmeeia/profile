@@ -1,0 +1,129 @@
+
+{
+    "base": "https://photos.adobe.io/",
+    "id": "3f94fbe4408376fd5cdd3c70d068821d",
+    "type": "account",
+    "email": "ad.china0731@gmail.com",
+    "full_name": "a ad",
+    "first_name": "a",
+    "last_name": "ad",
+    "created": "2019-10-27T08:28:00.437944Z",
+    "updated": "2022-02-28T05:01:48.303920Z",
+    "wcd_guid": "3E1D42E45DB555080A495C4A",
+    "country": "HK",
+    "entitlement": {
+        "status": "subscriber",
+        "trial": {
+            "start": "2022-02-28T05:01:40.026934Z",
+            "end": "2032-03-07T05:01:40.026934Z"
+        },
+        "current_subs": {
+            "product_id": "lightroom",
+            "store": "adobe",
+            "purchase_date": "2022-02-28T05:01:47.150383Z",
+            "sao": {
+                "inpkg_CCES": "0",
+                "inpkg_CCLE": "0",
+                "inpkg_CCSN": "0",
+                "inpkg_CCSV": "0",
+                "inpkg_LCCC": "0",
+                "inpkg_LPES": "1",
+                "inpkg_LRBRL": "0",
+                "inpkg_LRM0GB": "0",
+                "inpkg_LRM40GB": "0",
+                "inpkg_LRMAC": "0",
+                "inpkg_LRMC": "0",
+                "inpkg_LRMP": "0",
+                "inpkg_LRPUF": "0",
+                "inpkg_LRTB": "0",
+                "inpkg_LRWIN": "0",
+                "inpkg_PHLT": "0",
+                "inpkg_PHLT2": "0",
+                "inpkg_PLES": "0",
+                "storage_quota": "1024"
+            }
+        },
+        "storage": {
+            "used": 5887096,
+            "limit": 1154487209165,
+            "display_limit": 1099511627776,
+            "warn": 992137445376
+        }
+    },
+    "config": {
+        "create_lrm_renditions_on_server": true,
+        "hide_lrm_custom_album_asset_order": true,
+        "lrd_sync_collections_by_default": true,
+        "notify_daily_in_app_unlimited_import_end": 15,
+        "notify_local_quota_reset": 5,
+        "notify_local_unlimited_import_end": 7,
+        "notify_local_without_app_launch": 14,
+        "upload_lrd_originals": false,
+        "first_asset_email": true,
+        "allow_video_uploads": true,
+        "hide_lrd_sync_switch": true,
+        "disable_lrd_auto_sync_collection": 0,
+        "upgrade_lrd_less_65": true,
+        "stacks_api": true,
+        "storage_schema_version": 2,
+        "storage_track": true,
+        "one_quota": true,
+        "ims_hoolihan_enabled": true,
+        "allow_asset_importance_calculation": true,
+        "purge_assets_after": 5184000,
+        "whitelist_filter_v1_payload": true,
+        "sync_down_default_page_size": 100,
+        "sync_down_max_page_size": 500,
+        "enable_best_frame_scoring": true,
+        "allow_best_frame_in_best_photos": true,
+        "migration_delay": 3600,
+        "upgrade_lrd_less_than_version": "10.4",
+        "allow_direct_upload": true,
+        "search_index": true,
+        "allow_heif": true
+    },
+    "links": {
+        "self": {
+            "href": "/v2/accounts/3f94fbe4408376fd5cdd3c70d068821d"
+        },
+        "/rels/apps": {
+            "href": "/v2/accounts/3f94fbe4408376fd5cdd3c70d068821d/apps"
+        },
+        "/rels/avatars/small": {
+            "href": "/v2/avatars/3f94fbe4408376fd5cdd3c70d068821d/20140807000000/small",
+            "size": 50
+        },
+        "/rels/avatars/small2x": {
+            "href": "/v2/avatars/3f94fbe4408376fd5cdd3c70d068821d/20140807000000/small2x",
+            "size": 100
+        },
+        "/rels/avatars/medium": {
+            "href": "/v2/avatars/3f94fbe4408376fd5cdd3c70d068821d/20140807000000/medium",
+            "size": 115
+        },
+        "/rels/avatars/medium2x": {
+            "href": "/v2/avatars/3f94fbe4408376fd5cdd3c70d068821d/20140807000000/medium2x",
+            "size": 230
+        },
+        "/rels/avatars/large": {
+            "href": "/v2/avatars/3f94fbe4408376fd5cdd3c70d068821d/20140807000000/large",
+            "size": 138
+        },
+        "/rels/avatars/large2x": {
+            "href": "/v2/avatars/3f94fbe4408376fd5cdd3c70d068821d/20140807000000/large2x",
+            "size": 276
+        }
+    },
+    "payload": {
+        "lightroom_web": {
+            "similarity_data_ready": true
+        },
+        "universal": {
+            "communication_preference": "zh-cn",
+            "disallow_face_detection": true
+        }
+    },
+    "avatar": {
+        "placeholder": true
+    }
+}
