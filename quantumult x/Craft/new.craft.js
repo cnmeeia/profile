@@ -1,4 +1,4 @@
-const obj=
+var obj=
 {
   "userId" : "83879051-715b-fc2e-7a9c-db7df40351fb",
   "market" : "CN",
@@ -39,6 +39,5 @@ const obj=
   "isBetaUser" : true,
   "lastName" : "shayne"
 }
-
 
 $done({body: JSON.stringify(obj)});

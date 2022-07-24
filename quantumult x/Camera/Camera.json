@@ -1,0 +1,40 @@
+{
+  "request_date_ms" : 1658677081883,
+  "request_date" : "2022-07-24T15:38:01Z",
+  "subscriber" : {
+    "non_subscriptions" : {
+
+    },
+    "first_seen" : "2022-07-24T10:26:43Z",
+    "original_application_version" : "81",
+    "other_purchases" : {
+
+    },
+    "management_url" : "https://apps.apple.com/account/subscriptions",
+    "subscriptions" : {
+      "com.uzero.funforcam.monthlysub" : {
+        "is_sandbox" : false,
+        "ownership_type" : "PURCHASED",
+        "billing_issues_detected_at" : null,
+        "period_type" : "trial",
+        "expires_date" : "2099-07-27T15:35:26Z",
+        "grace_period_expires_date" : null,
+        "unsubscribe_detected_at" : "2022-07-24T15:37:52Z",
+        "original_purchase_date" : "2022-07-24T15:35:27Z",
+        "purchase_date" : "2022-07-24T15:35:26Z",
+        "store" : "app_store"
+      }
+    },
+    "entitlements" : {
+      "ProVersion" : {
+        "grace_period_expires_date" : null,
+        "purchase_date" : "2022-07-24T15:35:26Z",
+        "product_identifier" : "com.uzero.funforcam.monthlysub",
+        "expires_date" : "2099-07-27T15:35:26Z"
+      }
+    },
+    "original_purchase_date" : "2022-07-24T10:26:02Z",
+    "original_app_user_id" : "$RCAnonymousID:4a7498d77cc7483a90ac269605a73069",
+    "last_seen" : "2099-07-24T10:26:43Z"
+  }
+}
