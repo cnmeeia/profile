@@ -1,0 +1,29 @@
+{
+  "result" : 1,
+  "message" : "Subscription saved 69457",
+  "secret" : "FBSx8chNrp4s2ndThbSwxFGTMdw8CzcLlMjnYRtMccVmqfQGzeWxurVZofue20+Cwu2E001iZCXjPqNJNp/1TZqOye9DADRyAZHxAyXcAM4qmyNUSJQSIbzD6VOHXPaHG9QfDWVrncfUF9fiVey0POcBNGPrIqLVLkHzHBkUiBRGgExeLwdFXf5P5UViBwVlK5X1WRfLnDzyVNRpiavVmgRXCkKkuvNFD+4JAT7Z8ntGrYH5IWYGwZZ1m2OomFLj4GAINPtcWtuxSQpOCnmbIXBtdocQ6flokY6lroLvjAm4wvP/TaKCxi7PczfZd5CB3szGiVTxV1QS8MLGNYWSaG8jTrgyGuOPY7zlDP1siCcIwGaeV6rN27+OUdqc+mO28HaunJD5HEvrbtUBpW4LrqovxQRvibIlT9vzFV5grd/uuo4g8oPqAMFWYoy6uEsmH1GCWWKHYgJAXBcqQ0r2rtn3OY+R5+Tjt4Xu0RAkOuKV1Q43c3ezkTFh/rhm5tN4k8SCSQcfJWDKF+sr9khZzdeToOKVEvheiOGQT3iAoZ4ZWXDDz8uaUw==",
+  "privileges" : [
+    {
+      "id" : null,
+      "purchasedStore" : true,
+      "modified" : null,
+      "activeUntilString" : "01-08-2122",
+      "createdString" : "",
+      "active" : true,
+      "expired" : false,
+      "sku" : null,
+      "type" : null,
+      "created" : null,
+      "privilege" : {
+        "id" : 6,
+        "active" : true,
+        "created" : 1606499889302,
+        "name" : "PREMIUM",
+        "modified" : 11606499889302,
+        "createdString" : "2020-11-27 17:58:09"
+      },
+      "activeUntil" : 11659357321000
+    }
+  ],
+  "verified" : true
+}
