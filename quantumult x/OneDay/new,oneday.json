@@ -1,0 +1,206 @@
+{
+  "key" : {
+    "fingerprint" : "7684A7AF44DE938324222F4137FFE0E616519F61CC0036AB4353E1E4D55EC6E5"
+  },
+  "signupDate" : 1574253259000,
+  "credentials" : [
+    "Apple ID",
+    "SIWA"
+  ],
+  "subscription" : {
+    "source" : [
+      "Min",
+      [
+        "Unknown"
+      ]
+    ],
+    "premium" : true,
+    "product_id" : null,
+    "is_trial" : false,
+    "auto_renew" : false,
+    "plus_on_ios" : true,
+    "is_eligible_for_trial" : false,
+    "plus_on_mac" : true,
+    "expires" : null
+  },
+  "displayName" : "mick",
+  "realName" : "mick",
+  "bio" : null,
+  "featureEnrollments" : [
+    {
+      "status" : "active",
+      "id" : 0,
+      "feature" : "publish",
+      "createDate" : "2011-11-11T00:00:00.000Z",
+      "isActive" : true
+    },
+    {
+      "status" : "active",
+      "id" : 0,
+      "feature" : "backup",
+      "createDate" : "2011-11-11T00:00:00.000Z",
+      "isActive" : true
+    }
+  ],
+  "chocolateSyncResetRequested" : 11601501104538,
+  "id" : "172300709",
+  "isAdmin" : false,
+  "isEligibleForTrial" : false,
+  "email" : "fjbz2t5xbq@privaterelay.appleid.com",
+  "website" : null,
+  "minimumSubscription" : null,
+  "journalOrder" : [
+    108491236455,
+    228232514,
+    107855932898
+  ],
+  "basic_storage" : {
+    "switch_allowed_interval" : 0,
+    "active_device_name" : "蜜",
+    "active_device" : "63D9BB9C-BF06-4783-AE4C-489320CAA063",
+    "switch_allowed_on" : "2922-07-20T07:23:18.563Z",
+    "activated" : "2922-07-20T07:23:18.563Z"
+  },
+  "featureBundle" : {
+    "featuresFull" : [
+      {
+        "name" : "journalLimit",
+        "limit" : 1,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "backup",
+        "enabled" : true,
+        "canUpgrade" : false
+      },
+      {
+        "name" : "sync",
+        "enabled" : true,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "discountedSubscription",
+        "enabled" : false,
+        "canUpgrade" : false
+      },
+      {
+        "name" : "printingDiscount",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "prioritySupport",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "scanToPDF",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "attachmentsPerEntry",
+        "limit" : 1,
+        "canUpgrade" : false
+      },
+      {
+        "name" : "journalViaSMS",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "canAttachPhoto",
+        "enabled" : true,
+        "canUpgrade" : false
+      },
+      {
+        "name" : "canAttachVideo",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "canAttachAudio",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "canAttachDrawing",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "canAttachPDF",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "instagram",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "ifttt",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "colors",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "emailToJournal",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "appIcons",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "moonPhase",
+        "enabled" : false,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "foursquareNearbyVenues",
+        "enabled" : false,
+        "canUpgrade" : true
+      }
+    ],
+    "features" : [
+      {
+        "name" : "imagesPerEntry",
+        "limit" : 1,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "journalLimit",
+        "limit" : 1,
+        "canUpgrade" : true
+      },
+      {
+        "name" : "backup",
+        "limit" : null,
+        "canUpgrade" : false
+      },
+      {
+        "name" : "sync",
+        "limit" : null,
+        "canUpgrade" : false
+      }
+    ],
+    "reason" : "unknown",
+    "bundleName" : "free"
+  },
+  "avatar" : "172300709/703dc01e9cccdc6a9ac0a15df1af3dfc",
+  "syncUploadBaseUrl" : "https://dayone-syncmedia-production-new.s3.amazonaws.com/incoming/3aa0/172300709",
+  "notes" : null,
+  "primaryJournalId" : null,
+  "etag" : "427d8b6b33931e47905e136eb3c5e115",
+  "master_key_storage" : [
+    "cloudkit"
+  ],
+  "mercurySyncResetRequested" : null
+}
