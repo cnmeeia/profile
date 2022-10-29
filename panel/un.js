@@ -61,7 +61,7 @@ async function check_youtube_premium() {
       if (code === 'Not Available') {
         youtube_check_result += ' 🎉YouTube未解锁'
       } else {
-        youtube_check_result += '🎉YouTube解锁：' + code.toUpperCase()
+        youtube_check_result += '🎉YouTube：' + code.toUpperCase()
       }
     })
     .catch((error) => {
@@ -117,7 +117,7 @@ async function check_netflix() {
       if (code === 'Not Found') {
         return inner_check(80018499)
       }
-      netflix_check_result += '🎈Netflix解锁：' + code.toUpperCase()
+      netflix_check_result += '🎈Netflix：' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
