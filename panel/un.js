@@ -117,7 +117,7 @@ async function check_netflix() {
       if (code === 'Not Found') {
         return inner_check(80018499)
       }
-      netflix_check_result += '🎈Netflix：' + code.toUpperCase()
+      netflix_check_result += '🎉Netflix：' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
@@ -125,7 +125,7 @@ async function check_netflix() {
         return Promise.reject('Not Available')
       }
 
-      netflix_check_result += '🎈Netflix自制 ➟ ' + code.toUpperCase()
+      netflix_check_result += '🎉Netflix自制 ➟ ' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
@@ -133,7 +133,7 @@ async function check_netflix() {
         return
       }
       if (error === 'Not Available') {
-        netflix_check_result += '🎈Netflix无法观看'
+        netflix_check_result += '🎉Netflix无法观看'
         return
       }
       netflix_check_result += '检测失败'
