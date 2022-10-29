@@ -6,7 +6,7 @@ const REQUEST_HEADERS = {
 
 ;(async () => {
   let panel_result = {
-    title: '流媒体解锁检测',
+    title: '🎉流媒体解锁',
     content: '',
     icon: 'play.circle',
     'icon-color': '#00BC12',
@@ -59,9 +59,9 @@ async function check_youtube_premium() {
   await inner_check()
     .then((code) => {
       if (code === 'Not Available') {
-        youtube_check_result += '油管未解锁'
+        youtube_check_result += ' 🎉YouTube未解锁'
       } else {
-        youtube_check_result += '油管解锁：' + code.toUpperCase()
+        youtube_check_result += '🎉YouTube解锁：' + code.toUpperCase()
       }
     })
     .catch((error) => {
@@ -117,7 +117,7 @@ async function check_netflix() {
       if (code === 'Not Found') {
         return inner_check(80018499)
       }
-      netflix_check_result += '奈飞解锁：' + code.toUpperCase()
+      netflix_check_result += '🎈Netflix解锁：' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
@@ -125,7 +125,7 @@ async function check_netflix() {
         return Promise.reject('Not Available')
       }
 
-      netflix_check_result += '奈飞自制 ➟ ' + code.toUpperCase()
+      netflix_check_result += '🎈Netflix自制 ➟ ' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
@@ -133,7 +133,7 @@ async function check_netflix() {
         return
       }
       if (error === 'Not Available') {
-        netflix_check_result += '奈飞无法观看'
+        netflix_check_result += '🎈Netflix无法观看'
         return
       }
       netflix_check_result += '检测失败'
