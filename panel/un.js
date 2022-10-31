@@ -6,7 +6,7 @@ const REQUEST_HEADERS = {
 
 ;(async () => {
   let panel_result = {
-    title: '🎉流媒体解锁',
+    title: '流媒体解锁',
     content: '',
     icon: 'play.circle',
     'icon-color': '#00BC12',
