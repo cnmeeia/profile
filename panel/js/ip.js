@@ -13,11 +13,11 @@ $httpClient.get(url, function(error, response, data){
     let country = jsonData.country
     let emoji = getFlagEmoji(jsonData.countryCode)
     let city = jsonData.city
-    let isp = jsonData.isp
+    let as = jsonData.as
     let ip = jsonData.query
   body = {
     title: "节点信息",
-    content: `IP信息：${ip}\n运营商：${isp}`,
+    content: `IP信息：${ip}\n运营商：${as}`,
     icon: "antenna.radiowaves.left.and.right"
   }
   $done(body);
