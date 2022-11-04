@@ -17,8 +17,8 @@ $httpClient.get(url, function(error, response, data){
     let ip = jsonData.query
   body = {
     title: "节点信息",
-    content: `IP信息：${ip}\n运营商：${isp}\n所在地：${city}`,
-    icon: "antenna.radiowaves.left.and.right"icon-color="#00E079"
+    content: `IP信息：${ip}\n运营商：${isp}`,
+    icon: "antenna.radiowaves.left.and.right"
   }
   $done(body);
 });
