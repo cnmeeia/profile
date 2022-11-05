@@ -18,7 +18,7 @@ $httpClient.get(url, function(error, response, data){
   body = {
     title: "节点信息",
     content: `IP： ${ip}\nAS：${as}`,
-    icon: "antenna.radiowaves.left.and.right"
+    icon: "waveform.path.ecg"
   }
   $done(body);
 });
