@@ -8,8 +8,6 @@ const REQUEST_HEADERS = {
   let panel_result = {
     title: '流媒体解锁',
     content: '',
-    icon: 'play.circle',
-    'icon-color': '#00BC12',
   }
   await Promise.all([check_netflix(), check_youtube_premium()])
     .then((result) => {
@@ -20,56 +18,6 @@ const REQUEST_HEADERS = {
       $done(panel_result)
     })
 })()
-
-async function check_youtube_premium() {
-  let inner_check = () => {
-    return new Promise((resolve, reject) => {
-      let option = {
-        url: 'https://www.youtube.com/premium',
-        headers: REQUEST_HEADERS,
-      }
-      $httpClient.get(option, function (error, response, data) {
-        if (error != null || response.status !== 200) {
-          reject('Error')
-          return
-        }
-
-        if (data.indexOf('Premium is not available in your country') !== -1) {
-          resolve('Not Available')
-          return
-        }
-
-        let region = ''
-        let re = new RegExp('"countryCode":"(.*?)"', 'gm')
-        let result = re.exec(data)
-        if (result != null && result.length === 2) {
-          region = result[1]
-        } else if (data.indexOf('www.google.cn') !== -1) {
-          region = 'CN'
-        } else {
-          region = 'US'
-        }
-        resolve(region)
-      })
-    })
-  }
-
-  let youtube_check_result = ''
-
-  await inner_check()
-    .then((code) => {
-      if (code === 'Not Available') {
-        youtube_check_result += ' 🎉YouTube未解锁'
-      } else {
-        youtube_check_result += '🎉YouTube：' + code.toUpperCase()
-      }
-    })
-    .catch((error) => {
-      youtube_check_result += '检测失败'
-    })
-
-  return youtube_check_result
-}
 
 async function check_netflix() {
   let inner_check = (filmId) => {
