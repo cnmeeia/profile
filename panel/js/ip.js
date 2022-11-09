@@ -8,6 +8,6 @@ $httpClient.get(url, function(error, response, data){
     content: `IP ： ${ip}\nAS：${as}`,
   }
   $done(body);
-  $notification.post("IP地址", ip, as);
+
 
 });
