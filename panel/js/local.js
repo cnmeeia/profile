@@ -4,7 +4,7 @@ $httpClient.get(url, function(error, response, data){
     let addr = jsonData.pro
     let ip = jsonData.ip
   body = {
-    title: "本地网络",
+    title: "本地",
     content: `IP地址： ${ip}`,
   }
   $done(body);
