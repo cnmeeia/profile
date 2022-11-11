@@ -4,8 +4,8 @@ $httpClient.get(url, function(error, response, data){
     let as = jsonData.as
     let ip = jsonData.query
   body = {
-    title: "节点信息",
-    content: `IP ： ${ip}\nAS：${as}`,
+    title: "代理",
+    content: `IP ： ${ip}`,
   }
   $done(body);
 
