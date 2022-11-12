@@ -6,7 +6,7 @@ $httpClient.get(url, function(error, response, data){
     let ip = jsonData.query
   body = {
     title: "代理",
-    content: `IP:   ${ip}\nAS:  ${as}`,
+    content: `${ip}\n${as}`,
   }
   $done(body);
 });
