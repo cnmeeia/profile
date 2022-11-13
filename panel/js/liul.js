@@ -10,9 +10,9 @@ let args = getArgs();
   let expire = args.expire || info.expire;
   let content = [`${bytesToSize(used)} | ${bytesToSize(total)}`];
 
-  if (resetDayLeft) {
+//  if (resetDayLeft) {
     //content.push(`剩余${resetDayLeft}天`);
-  }
+ // }
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
     content.push(`${formatTime(expire)}`);
