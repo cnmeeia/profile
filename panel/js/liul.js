@@ -8,14 +8,14 @@ let args = getArgs();
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let content = [`${bytesToSize(used)} | ${bytesToSize(total)}`];
 
-  if (resetDayLeft) {
-    content.push(`重置：剩余${resetDayLeft}天`);
-  }
+//  if (resetDayLeft) {
+    //content.push(`剩余${resetDayLeft}天`);
+ // }
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
-    content.push(`到期：${formatTime(expire)}`);
+    content.push(`${formatTime(expire)}`);
   }
 
   let now = new Date();
@@ -25,7 +25,7 @@ let args = getArgs();
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title} | ${hour}:${minutes}`,
+    title: `${args.title}`,
     content: content.join("\n")
   });
 })();
@@ -108,9 +108,9 @@ function bytesToSize(bytes) {
 }
 
 function formatTime(time) {
-  let dateObj = new Date(time);
-  let year = dateObj.getFullYear();
-  let month = dateObj.getMonth() + 1;
-  let day = dateObj.getDate();
-  return year + "年" + month + "月" + day + "日";
+    let dateObj = new Date(time);
+    let year = dateObj.getFullYear();
+    let month = dateObj.getMonth() + 1;
+    let day = dateObj.getDate();
+    return year + "年" + month + "月" + day + "日";
 }
