@@ -13,10 +13,10 @@ let args = getArgs();
 //  if (resetDayLeft) {
     //content.push(`剩余${resetDayLeft}天`);
  // }
-  if (expire && expire !== "false") {
-    if (/^[\d.]+$/.test(expire)) expire *= 1000;
-    content.push(`${formatTime(expire)}`);
-  }
+  //if (expire && expire !== "false") {
+    //if (/^[\d.]+$/.test(expire)) expire *= 1000;//到期
+    //content.push(`🕑 ${formatTime(expire)}`);
+  //}
 
   let now = new Date();
   let hour = now.getHours();
