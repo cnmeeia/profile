@@ -8,7 +8,7 @@ let args = getArgs();
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`流量使用情况：~ ${bytesToSize(used)}`];
+  let content = [`流量已使用：~  ${bytesToSize(used)}`];
 
 
 
