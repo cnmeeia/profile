@@ -8,15 +8,21 @@ let args = getArgs();
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let content = [`流量已使用  ~  ${bytesToSize(used)}`];
+
+
+
+
+//  let content = [`流量信息：${bytesToSize(used)} ～ ${bytesToSize(total)}`];
+
 
 //  if (resetDayLeft) {
     //content.push(`剩余${resetDayLeft}天`);
  // }
-  if (expire && expire !== "false") {
-    if (/^[\d.]+$/.test(expire)) expire *= 1000;
-    content.push(`${formatTime(expire)}`);
-  }
+  //if (expire && expire !== "false") {
+    //if (/^[\d.]+$/.test(expire)) expire *= 1000;//到期
+    //content.push(`🕑 ${formatTime(expire)}`);
+  //}
 
   let now = new Date();
   let hour = now.getHours();

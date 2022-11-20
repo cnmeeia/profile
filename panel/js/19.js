@@ -22,15 +22,12 @@ const headers = {
     let desc = newslist.desc;
     let news = newslist.news[0];
     //let risk = newslist.riskarea.length;
-    let title = "疫情";
-    let subtitle = ` ${formatTime()}`;
+    let title = "🗞【疫情信息概览】";
+    let subtitle = `  📅  ${formatTime()}`;
     let detail =
-        "😷 " + news.title 
+        "动态详情" + news.summary
     console.log(detail)
-   
-		$.notify(title, detail);
-		
-		
+    $.notify(title, subtitle, detail);
 })()
 .catch((err) => $.error(err))
     .finally(() => $.done());
