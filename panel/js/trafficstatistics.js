@@ -55,7 +55,7 @@ if(net=="en0") {
 
 
   $done({
-      title:"流量统计 | "+netType,
+      title:netType,
       content:`流量 ➟ ${upload} ➟ ${download}`
       
       //+
