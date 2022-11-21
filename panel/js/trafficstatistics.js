@@ -56,7 +56,7 @@ if(net=="en0") {
 
   $done({
       title:netType,
-      content:`流量 ➟ ${upload} ➟ ${download}`
+      content:`${upload} ➟ ${download}`
       
       //+
       //`速度 ➟ ${outCurrentSpeed} | ${inCurrentSpeed}\n` +
