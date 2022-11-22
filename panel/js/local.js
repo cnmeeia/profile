@@ -4,7 +4,7 @@ $httpClient.get(url, function(error, response, data){
     let Code = jsonData.city
     let ip = jsonData.ip
   body = {
-    title: "",
+    title: "Local",
     content: `${Code} ${ip}`,
   }
   $done(body);
