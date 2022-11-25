@@ -1,11 +1,11 @@
-let url = "https://ipinfo.io/json"
+let url = ""
 $httpClient.get(url, function(error, response, data){
     let jsonData = JSON.parse(data)
-    let Code = jsonData.city
+    let Code = jsonData.country
     let ip = jsonData.ip
   body = {
-    title: "Local",
-    content: `${Code} ${ip}`,
+    title: "本地",
+    content: `${Code} ➟ ${ip}`,
   }
   $done(body);
 });
