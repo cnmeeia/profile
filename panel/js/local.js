@@ -1,11 +1,11 @@
-let url = "https://whois.pconline.com.cn/ipJson.jsp?json=true"
+let url = "https://ipinfo.io/json"
 $httpClient.get(url, function(error, response, data){
     let jsonData = JSON.parse(data)
-    let addr = jsonData.addr
+    let Code = jsonData.country
     let ip = jsonData.ip
   body = {
-    title: "Local",
-    content: `➟ ${ip}`,
+    title: "本地",
+    content: `${Code} ➟ ${ip}',
   }
   $done(body);
 });
