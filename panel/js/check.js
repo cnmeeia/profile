@@ -1,22 +1,18 @@
-//由本群重庆佬提供，key和小白脸大佬修改完善。
 let $ = {
-Youtube:'https://www.youtube.com/'
-}
-
+HW:'http://connectivitycheck.platform.hicloud.com/generate_204',
+YT:'https://www.youtube.com',
+GH:'https://www.github.com'}
 !(async () => {
-await Promise.all([http('Youtube')]).then((x)=>{
+await Promise.all([http('HW'),http('YT'),http('GH')]).then((x)=>{
 	$done({
-    title: '网络延迟',
-    content: x.join(),
-  })
-})
-})();
-
+    title: '连通测试',
+    content: x.join(''),
+    icon: 'touchid',
+    'icon-color': '#ECA42D',
+  })})})();
 function http(req) {
     return new Promise((r) => {
 			let time = Date.now();
         $httpClient.post($[req], (err, resp, data) => {
-            r(req +'\xa0\xa0\xa0\xa0\xa0\t:'+	(Date.now() - time)+'ms');
-        });
-    });
-}
+            r(req +':' +(Date.now() - time)+'ms'+' '+' ');
+        });});}
