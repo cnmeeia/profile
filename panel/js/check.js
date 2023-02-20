@@ -16,8 +16,7 @@ function http(req) {
     return new Promise((r) => {
 			let time = Date.now();
         $httpClient.post($[req], (err, resp, data) => {
-            r(req +
-						'\xa0\xa0\xa0\xa0\xa0\t:'+	(Date.now() - time)+' ms');
+            r(req +'\xa0\xa0\xa0\xa0\xa0\t:'+	(Date.now() - time)+'ms');
         });
     });
 }
