@@ -8,8 +8,6 @@ const REQUEST_HEADERS = {
   let panel_result = {
     title: '连通测试',
     content: '',
-    icon: 'touchid',
-    'icon-color': '#ECA42D',
   }
 
   await Promise.all([test_Huawei(), test_youtube(), test_github()])
@@ -21,33 +19,7 @@ const REQUEST_HEADERS = {
       $done(panel_result)
     })
 })()
-///Huawei
-async function test_Huawei() {
-  let inner_check = () => {
-    return new Promise((resolve) => {
-      let option = {
-        url: 'http://connectivitycheck.platform.hicloud.com/generate_204',
-        headers: REQUEST_HEADERS,
-      }
-      Huawei_startTime = Date.now()
-      $httpClient.post(option, function (error, response, data) {
-        Huawei_endTime = Date.now()
-        resolve('1')
-      })
-    })
-  }
 
-  Huawei_test_result =  'HW'+':'
-  await inner_check()
-    .then((code) => {
-      Huawei_Delay = Huawei_endTime-Huawei_startTime + ""
-      if (code === '1') {
-        Huawei_test_result += Huawei_Delay + 'ms'+'\xa0\|'
-      }
-    })
-  
-  return Huawei_test_result
-}
 
 //keyyoutube
 async function test_youtube() {
