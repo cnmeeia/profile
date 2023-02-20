@@ -10,7 +10,7 @@ const REQUEST_HEADERS = {
     content: '',
   }
 
-  await Promise.all([test_Huawei(), test_youtube(), test_github()])
+  await Promise.all([test_youtube(), test_github()])
     .then((result) => {
       let content = result.join('')
       panel_result['content'] = content
