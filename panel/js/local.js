@@ -4,7 +4,7 @@ $httpClient.get(url, function(error, response, data){
     let Code = jsonData.city
     let ip = jsonData.ip
   body = {
-    title: "运营商ip",
+    title: "运营商",
     content: `${Code} ➟ ${ip}',
   }
   $done(body);
