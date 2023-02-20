@@ -1,14 +1,10 @@
 let $ = {
-HW:'http://connectivitycheck.platform.hicloud.com/generate_204',
-YT:'https://www.youtube.com',
-GH:'https://www.github.com'}
+YouTube:'https://www.youtube.com',
 !(async () => {
-await Promise.all([http('HW'),http('YT'),http('GH')]).then((x)=>{
+await Promise.all([http('YouTube')]).then((x)=>{
 	$done({
     title: '连通测试',
     content: x.join(''),
-    icon: 'touchid',
-    'icon-color': '#ECA42D',
   })})})();
 function http(req) {
     return new Promise((r) => {
