@@ -8,7 +8,7 @@ Youtube:'https://www.youtube.com/'
 await Promise.all([http('Baidu'),http('Youtube')]).then((x)=>{
 	$done({
     title: 'Network Connectivity Test',
-    content: x.join,
+    content: x.join(),
   })
 })
 })();
