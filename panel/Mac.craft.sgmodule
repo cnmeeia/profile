@@ -1,0 +1,11 @@
+#!name= 解锁 craft 会员
+#!desc= 解锁会员
+
+[Script]
+
+Craft = type=http-response,pattern=https://api.craft.do/auth/v2/profile,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/cnmeeia/profile/main/quantumult%20x/Craft/mac.craft.js,script-update-interval=0
+
+
+[MITM]
+
+hostname = %INSERT% api.craft.do
