@@ -10,7 +10,7 @@ const REQUEST_HEADERS = {
     content: '',
   }
 
-  await Promise.all([test_youtube(), test_github()])
+  await Promise.all([test_youtube(), test_openai_team()])
     .then((result) => {
       let content = result.join('')
       panel_result['content'] = content
@@ -51,29 +51,29 @@ async function test_youtube() {
 
 ////Github
 
-async function test_github() {
+async function test_openai_team() {
   let inner_check = () => {
     return new Promise((resolve) => {
       let option = {
-        url: 'https://www.github.com',
+        url: 'https://openai.app2022.ml',
         headers: REQUEST_HEADERS,
       }
-      github_startTime = Date.now()
+      openai_team_startTime = Date.now()
       $httpClient.post(option, function (error, response, data) {
-        github_endTime = Date.now()
+        openai_team_endTime = Date.now()
         resolve('1')
       })
     })
   }
 
-  github_test_result =  '\xa0\GitHub'+' ➟ '
+  openai_team_test_result =  '\xa0\openai_team'+' ➟ '
   await inner_check()
     .then((code) => {
-      github_Delay = github_endTime-github_startTime + ""
+      openai_team_Delay = openai_team_endTime-openai_team_startTime + ""
       if (code === '1') {
-        github_test_result += github_Delay + 'ms'
+        openai_team_test_result += openai_team_Delay + 'ms'
       }
     })
   
-  return github_test_result
+  return openai_team_test_result
 }
