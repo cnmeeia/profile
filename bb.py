@@ -1,34 +1,48 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+from packaging import version
 import requests
 from bs4 import BeautifulSoup
-from packaging import version  # 用于比较版本号
 
-# FOFA 查询页面 URL
-FOFA_URL = "https://fofa.info/result?qbase64=aWNvbl9oYXNoPSItMTM1NDAyNzMxOSIgJiYgYXNuPSIxMzMzNSIgJiYgcG9ydD0iNDQzIg%3D%3D"
+# FOFA 查询页面基础 URL
+BASE_URL = "https://fofa.info/result?qbase64=aWNvbl9oYXNoPSItMTM1NDAyNzMxOSIgJiYgYXNuPSIxMzMzNSIgJiYgcG9ydD0iNDQzIg%3D%3D"
 
 # 文件名定义
 OUTPUT_FILE_1 = "1.txt"
 OUTPUT_FILE_2 = "2.txt"
 OUTPUT_FILE_OK = "OK.txt"
 
-def get_fofa_results():
-    """抓取 FOFA 页面并提取结果地址"""
-    print("正在抓取 FOFA 页面...")
-    response = requests.get(FOFA_URL)
-    if response.status_code != 200:
-        print(f"无法访问 FOFA 页面，状态码：{response.status_code}")
-        return []
+def init_browser():
+    """初始化 Selenium 浏览器"""
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless")  # 无头模式
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    driver = webdriver.Chrome(options=options)
+    return driver
 
-    # 使用 BeautifulSoup 解析 HTML 内容
-    soup = BeautifulSoup(response.text, 'html.parser')
+def get_fofa_results(start_page, end_page):
+    """使用 Selenium 抓取 FOFA 页面并提取结果地址"""
+    print(f"正在抓取 FOFA 页面，从第 {start_page} 页到第 {end_page} 页...")
     results = []
+    driver = init_browser()
 
-    # 查找所有结果链接
-    for link in soup.find_all('a', href=True):
-        url = link['href']
-        if url.startswith("https://"):  # 提取 https 开头的链接
-            results.append(url)
+    for page in range(start_page, end_page + 1):
+        print(f"正在抓取第 {page} 页...")
+        driver.get(f"{BASE_URL}&page={page}")
+        time.sleep(3)  # 等待页面加载
 
-    print(f"提取到 {len(results)} 个地址")
+        # 查找页面中结果的链接（通过具体的 class 筛选结果链接）
+        elements = driver.find_elements(By.CSS_SELECTOR, "a[href^='https://']")
+        for elem in elements:
+            url = elem.get_attribute("href")
+            if url not in results:
+                results.append(url)
+
+    driver.quit()
+    print(f"总共提取到 {len(results)} 个地址")
     return results
 
 def append_login_to_urls(input_file, output_file):
@@ -77,8 +91,12 @@ def extract_version(html):
     return None
 
 def main():
+    # 配置分页范围
+    start_page = 1  # 起始页码
+    end_page = 5    # 结束页码
+
     # 第一步：抓取 FOFA 页面结果并保存到 1.txt
-    urls = get_fofa_results()
+    urls = get_fofa_results(start_page, end_page)
     with open(OUTPUT_FILE_1, "w", encoding="utf-8") as f:
         for url in urls:
             f.write(url + "\n")
@@ -92,4 +110,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
