@@ -91,4 +91,5 @@ def main():
     check_bpb_version(OUTPUT_FILE_2, OUTPUT_FILE_OK)
 
 if __name__ == "__main__":
+    main()
     
