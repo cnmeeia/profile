@@ -27,7 +27,7 @@ $.info(`从持久化存储读取参数后: ${$.toStr(arg)}`)
     barkBody = barkBody ?? `${subtitle ?? ''}\n${body ?? ''}`
     await http({
         method: 'get',
-        url: `https://falling-rice-2037.app-io.workers.dev/${arg.BARK_TOKEN}/${encodeURIComponent(title)}/${encodeURIComponent(
+        url: `https://bark.app-io.workers.dev/${arg.BARK_TOKEN}/${encodeURIComponent(title)}/${encodeURIComponent(
             barkBody
         )}?group=Surge&autoCopy=1&isArchive=1&icon=https%3A%2F%2Fraw.githubusercontent.com%2Fxream%2Fscripts%2Fmain%2Fscriptable%2Fsurge%2Fsurge-dark.png&sound=shake&level=timeSensitive`,
     })
