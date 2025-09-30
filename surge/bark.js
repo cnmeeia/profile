@@ -27,7 +27,7 @@ $.info(`从持久化存储读取参数后: ${$.toStr(arg)}`)
     barkBody = barkBody ?? `${subtitle ?? ''}\n${body ?? ''}`
     await http({
         method: 'get',
-        url: `https://bark.app-io.workers.dev/${arg.BARK_TOKEN}/${encodeURIComponent(title)}/${encodeURIComponent(
+        url: `https://bark.19510272.xyz/${arg.BARK_TOKEN}/${encodeURIComponent(title)}/${encodeURIComponent(
             barkBody
         )}?group=Surge&autoCopy=1&isArchive=1&icon=https://upload.19510272.xyz/surge.PNG&sound=paymentsuccess&level=timeSensitive`,
     })
