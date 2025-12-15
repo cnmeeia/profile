@@ -1,50 +1,49 @@
+const URL = "https://my.ippure.com/v1/info";
+const TIMEOUT = 8; // 秒
 
-const url = "https://my.ippure.com/v1/info"
+$httpClient.get({ url: URL, timeout: TIMEOUT }, (err, resp, body) => {
+  if (err) return doneFail("请求失败", "network.slash");
 
-$httpClient.get(url, (err, resp, data) => {
-  if (err) {
-    $done({ title: "IP 纯净度", content: "请求失败", icon: "network.slash" })
-    return
-  }
+  const j = safeJSON(body);
+  if (!j) return doneFail("JSON 解析失败", "exclamationmark.triangle.fill");
 
-  const j = JSON.parse(data)
+  const ip = toText(j.ip, "N/A");
+  const risk = toNumber(j.fraudScore, NaN);
 
-  const flag = flagEmoji(j.countryCode)
-  const nativeText = j.isResidential ? "✅ 是（原生）" : "🏢 否（机房/商业）"
-  const risk = j.fraudScore
-
-  // 根据风险系数判断等级
-  let riskText = `风险系数：${risk}`
-  let titleColor = "#007AFF" // 默认颜色
-
-  if (risk >= 80) {
-    riskText = `🛑 极高风险 (${risk})`
-    titleColor = "#FF3B30" // 红色
-  } else if (risk >= 70) {
-    riskText = `⚠️ 高风险 (${risk})`
-    titleColor = "#FF9500" // 橙色
-  } else if (risk >= 40) {
-    riskText = `🔶 中等风险 (${risk})`
-    titleColor = "#FFCC00" // 黄色
-  } else {
-    riskText = `✅ 低风险 (${risk})`
-    titleColor = "#34C759" // 绿色
-  }
-
+  const level = riskLevel(risk);
 
   $done({
     title: "IP 纯净度",
-    content:
-`IP：${j.ip}
-${riskText}`,
-    icon: risk >= 70 ? "exclamationmark.triangle.fill" : "checkmark.seal.fill",
-    'title-color': titleColor // 设置标题颜色，突出风险状态
-  })
-})
+    content: `IP：${ip}\n${level.text}`,
+    icon: level.icon,
+    "icon-color": level.color,     // icon + icon-color 官方支持 [web:1]
+    "title-color": level.color
+  });
+});
 
-function flagEmoji(code) {
-  if (code.toUpperCase() === "TW") {
-    code = "CN"
+function doneFail(msg, icon) {
+  $done({ title: "IP 纯净度", content: msg, icon });
+}
+
+function safeJSON(s) {
+  try { return JSON.parse(s); } catch (_) { return null; }
+}
+
+function toText(v, fallback) {
+  return (v === undefined || v === null || v === "") ? fallback : String(v);
+}
+
+function toNumber(v, fallback) {
+  const n = Number(v);
+  return Number.isFinite(n) ? n : fallback;
+}
+
+function riskLevel(risk) {
+  if (!Number.isFinite(risk)) {
+    return { text: "风险系数：N/A", icon: "questionmark.circle.fill", color: "#8E8E93" };
   }
-  return String.fromCodePoint(
-    ...code.toUpperCase().split('').map(c => 127397 + 
+  if (risk >= 80) return { text: `🛑 极高风险 (${risk})`, icon: "xmark.shield.fill", color: "#FF3B30" };
+  if (risk >= 70) return { text: `⚠️ 高风险 (${risk})`,   icon: "exclamationmark.triangle.fill", color: "#FF9500" };
+  if (risk >= 40) return { text: `🔶 中等风险 (${risk})`, icon: "shield.lefthalf.filled", color: "#FFCC00" };
+  return { text: `✅ 低风险 (${risk})`, icon: "checkmark.seal.fill", color: "#34C759" };
+}
