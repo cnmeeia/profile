@@ -14,7 +14,7 @@ $httpClient.get({ url: URL, timeout: TIMEOUT }, (err, resp, body) => {
 
   $done({
     title: "IP 纯净度",
-    content: `IP：${ip}\n${level.text}`,
+    content: `🟢 IP：${ip}\n${level.text}`,
     icon: level.icon,
     "icon-color": level.color,     // icon + icon-color 官方支持 [web:1]
     "title-color": level.color
